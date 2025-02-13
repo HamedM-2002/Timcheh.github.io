@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+@font-face {
+    font-family: DanaRegular;
+    src: url("../font/dana-fanum-regular.7dbd62d9025bc12d5457567f886f18f1.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: DanaMedium;
+    src: url("../font/dana-fanum-medium.fcfb2964e3789252eac34022cbacf31d.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: DanaSemiBold;
+    src: url("../font/dana-fanum-semibold.27a2185eddbb5d323824c97c574bb0d7.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: DanaBold;
+    src: url("../font/dana-fanum-bold.86a5110107155c674c37a344e7d209b8.woff2") format("woff2");
+}
+
+body,
+body input,
+body textarea,
+body select {
+    direction: rtl;
+    font-family: DanaRegular, DanaMedium, DanaSemiBold, DanaBold;
+}
+
+:root {
+    --uiBlue: var(--Blue, #0082FD);
+    --uiTextSemiBlack: var(--SemiBlack, #595959);
+    --uiTextBlack: var(--TextBlack, #141414);
+    --uiPriceColor: var(--PriceColor, #8C8C8C);
+    --uiDiscountColor: var(--DiscountColor, #feed00);
+    --uiProductBackgroundColor: var(--ProductBackgroundColor, #F5F5F5);
+    --uiFooterBackground: var(--FooterBackground, #FAFAFA);
+    --uiCopyrightBackground: var(--CopyrightBackground, #F5F5F5);
+    --uiSearchBackgroundColor: var(--SearchBackgroundColor, #F5F5F5);
+}
+
+body {
+    background-color: var(--uiCopyrightBackground);
+}
+
+.login {
+    height: 100vh !important;
+}
+
+.timcheh-login {
+    width: 100%;
+}
+
+.lux-login {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 3rem 5rem 4rem;
+    border-radius: 100px 20px;
+    border: 1px solid #D9D9D9;
+}
+
+.lux-login::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #E3E3E3;
+    border-radius: 100px 20px;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+}
+
+.lux-login .login-logo {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.lux-login .login-logo img {
+    vertical-align: middle;
+}
+
+.lux-login .form {
+    margin: 7rem auto 0 auto;
+}
+
+.lux-login .form h2,
+.lux-login .form span {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.lux-login .form span {
+    font-size: .8rem;
+}
+
+.phone-box {
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    height: 50px;
+    margin-bottom: 3rem;
+}
+
+.phone-box input {
+    width: 80%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    font-size: .9rem;
+    font-family: DanaSemiBold;
+    letter-spacing: 1px;
+    caret-color: var(--uiTextSemiBlack);
+}
+
+.phone-box input::placeholder {
+    color: #BFBFBF;
+    font-family: DanaRegular;
+    letter-spacing: 0;
+}
+
+.phone-box input:valid {
+    color: var(--uiBlue);
+}
+
+.phone-box i {
+    color: var(--uiPriceColor);
+}
+
+.phone-box > i {
+    font-size: 1.5rem;
+    position: relative;
+    right: 5px;
+    top: 10%;
+}
+
+.phone-box .reset {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--uiProductBackgroundColor);
+    position: relative;
+    left: 5px;
+    cursor: pointer;
+}
+
+.phone-box .reset i {
+    color: #aaa;
+}
+
+.resume-btn {
+    margin-top: 3rem;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--uiBlue);
+    font-size: 1.1rem;
+    color: #fff;
+    font-family: DanaMedium;
+    cursor: pointer;
+}
+
+.rules-text {
+    margin-top: .5rem;
+    color: #595959;
+    margin-bottom: 0 !important;
+}
+
+.rules-text a {
+    color: var(--uiBlue);
+    text-decoration: none;
+}

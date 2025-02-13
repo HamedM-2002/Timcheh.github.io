@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="FA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hamed-Miraki">
+    <meta name="description" content="My Third Exercise Project's login page">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="theme-color" content="#0082FD">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0082FD">
+    <meta name="msapplication-navbutton-color" content="#0082FD">
+    <meta name="msapplication-Tilecolor" content="#0082FD">
+    <title>ورود | فروشگاه اینترنتی تیمچه</title>
+    <link href="../image/favicon-32x32.png" rel="icon" type="image/x-icon">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="../css/login.css" type="text/css" rel="stylesheet">
+    <link href="../css/gs-lowlevel.css" type="text/css" rel="stylesheet">
+    <link href="../fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="../fontawesome-free-6.6.0-web/css/all.css" rel="stylesheet">
+    <link href="../fontawesome-free-6.6.0-web/css/regular.css" rel="stylesheet">
+    <link href="../fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet">
+    <link href="../fontawesome-free-6.6.0-web/css/brands.css" rel="stylesheet">
+    <link href="../uicons/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet">
+    <link href="../uicons/uicons-bold-straight/css/uicons-bold-straight.css" rel="stylesheet">
+    <link href="../uicons/uicons-brands/css/uicons-brands.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loading flex-container aligncontent-center alignitems-center justifycontent-center">
+        <div class="loading-content flex-container-column alignitems-center">
+            <img src="../image/logo.svg" alt="Timcheh Logo">
+            <div class="loading-bullets">
+                <div class="bullet-1"><i class="fi fi-rs-bullet"></i></div>
+                <div class="bullet-2"><i class="fi fi-rs-bullet"></i></div>
+                <div class="bullet-3"><i class="fi fi-rs-bullet"></i></div>
+                <div class="bullet-4"><i class="fi fi-rs-bullet"></i></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    let link = e.target.closest('a');
+                    let href = link ? link.getAttribute('href') : null;
+                    if (!href || href === '#') {
+                        console.log('Link has empty href or "#" and will not show loading:', link);
+                        return;
+                    }
+                    let loading = document.querySelector('.loading');
+                    loading.classList.add('show');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 3000);
+                });
+            });
+        }); 
+    </script>
+    <section class="login flex-container alignitems-center aligncontent-center justifycontent-center">
+        <div class="container">
+            <section class="lux-login">
+                <a href="../index.html" class="login-logo"><img src="../image/logo.svg" alt="Timcheh-Logo"></a>
+                <form action="#" class="form flex-container-column justifycontent-spacebetween">
+                    <h2>ورود به حساب کاربری</h2>
+                    <span>شماره موبایل خود را وارد کنید.</span>
+                    <section class="phone-box col-12 flex-container justifycontent-spacearound alignitems-center">
+                        <i class="fi fi-rs-mobile-notch"></i>
+                        <input type="tel" maxlength="11" minlength="11" required autofocus pattern="{0}[0-9]"
+                            id="phoneNumber" placeholder="شماره موبایل خود را وارد کنید.">
+                        <div class="reset flex-container alignitems-center justifycontent-center">
+                            <i class="fi fa-solid fa-close"></i>
+                        </div>
+                    </section>
+                    <button type="submit" class="resume-btn">ادامه</button>
+                    <span class="rules-text"><a href="#">شرایط و قوانین</a> سایت تیمچه و <a href="#">حریم خصوصی</a> را
+                        می پذیرم.</span>
+                </form>
+            </section>
+        </div>
+    </section>
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
